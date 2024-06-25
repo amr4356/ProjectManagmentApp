@@ -93,7 +93,7 @@ function App() {
     onDelete={handleDeleteProject} 
     onAddTask={handleAddTask} 
     onDeleteTask={handleDeleteTask}
-    tasks={projectsState.tasks}
+    tasks={projectsState.tasks.filter((task=>task.projectId===projectsState.selectedProjectId))}
   />
 );
   if(projectsState.selectedProjectId===null){
